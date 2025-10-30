@@ -9,6 +9,10 @@ import (
 	"github.com/nats-io/stan.go"
 )
 
+func main() {
+    PublishOrder()
+}
+
 // PublishOrder отправляет заказ из файла model.json в канал NATS
 func PublishOrder() {
 	// Чтение файла model.json
@@ -36,4 +40,5 @@ func PublishOrder() {
 	}
 
 	log.Println("✅ Сообщение из model.json отправлено в канал 'orders'")
+
 }
